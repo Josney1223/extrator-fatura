@@ -1,4 +1,4 @@
-# extrator-fatura-itau
+# extrator-fatura
 Já quis extrair as transações do seu cartão em formato CSV e se frustou miseravelmente? Este repositório quer te ajudar.
 
 
