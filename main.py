@@ -14,16 +14,15 @@ def main():
     if doc == "":
         raise Exception("Documento invalido")
 
-    doc_name = doc.split('/')[-1]
     reader = pypdf.PdfReader(doc)
 
     logging.info(f'Number of pages in "{doc}": ' + str(len(reader.pages)))
     logging.info(f'Bank {bank}')
 
     if bank == "itau":
-        registers = process_pdf_itau(reader, doc_name)
+        registers = process_pdf_itau(reader)
     elif bank == "btg":
-        registers = process_pdf_btg(reader, doc_name)
+        registers = process_pdf_btg(reader)
     else:
         raise Exception("Erro banco nao cadastrado")
 

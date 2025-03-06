@@ -2,7 +2,7 @@ import pypdf
 from src.lib.boilerplate import current, find_date, find_monetary, is_record
 
 
-def process_pdf_itau(reader: pypdf.PdfReader, doc_name: str):
+def process_pdf_itau(reader: pypdf.PdfReader) -> list[list[str]]:
     # TODO: Diferenciar compras dessa fatura e da próxima
     bad_records: list[str] = ["Pagamento efetuado"]
     register = None

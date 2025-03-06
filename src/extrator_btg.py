@@ -2,7 +2,7 @@ import pypdf
 from src.lib.boilerplate import current, find_monetary, find_date, is_record
 
 
-def process_pdf_btg(reader: pypdf.PdfReader, doc_name: str):
+def process_pdf_btg(reader: pypdf.PdfReader) -> list[list[str]]:
     # TODO: Nao funciona ainda
     bad_records = []
     register = None
